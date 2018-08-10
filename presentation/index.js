@@ -5,6 +5,8 @@ import puppeteer from "../assets/puppeteer.png";
 import nightwatch from "../assets/nightwatch.png";
 import cypress from "../assets/cypress.png";
 import seleniumarch from "../assets/seleniumarch.png";
+import sad from "../assets/sad.jpg";
+import happy from "../assets/happy.jpg";
 
 // Import Spectacle Core tags
 import {
@@ -33,7 +35,7 @@ const theme = createTheme({
   primary: {
     name: "Lato",
     googleFont: true,
-    styles: ["400","900"]
+    styles: ["400", "900"]
   },
   secondary: "Helvetica"
 });
@@ -43,7 +45,7 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide>
-          <Image src={logo} height="200"/>
+          <Image src={logo} height="200" />
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
@@ -57,19 +59,25 @@ export default class Presentation extends React.Component {
           <Heading size={6} textColor="secondary" caps>Current Setup</Heading>
           <List textColor="tertiary">
             <ListItem>Java + Selenium</ListItem>
-            <ListItem>Page Object Model based</ListItem>
-            <ListItem>Mature</ListItem>
-            <ListItem>Widely used</ListItem>
+            <ListItem>Page Object Model / Page Factory</ListItem>
+            <ListItem>Test NG</ListItem>
+            <ListItem>Maven</ListItem>
+            <ListItem>Extent Reports</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={6} textColor="secondary" caps>Issues faced</Heading>
           <List textColor="tertiary">
-            <ListItem>Flaky (due to architectural issues)</ListItem>
-            <ListItem>Requires training</ListItem>
-            <ListItem>Java isn't *our* dev stack</ListItem>
+            <ListItem>Unpredictable results</ListItem>
+            <ListItem>Java (not *our* dev stack)</ListItem>
+            <ListItem>Requires training/onboarding - OOP, POM</ListItem>
+            <ListItem>Architectural issues (Webdriver HTTP calls)</ListItem>
             <ListItem>Difficult to setup</ListItem>
           </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Image src={sad} height="400" />
+          <Heading size={4} caps lineHeight={1} textColor="tertiary">Sad Gopi :(</Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={2} textColor="primary" caps>Alternatives</Heading>
@@ -110,7 +118,7 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={6} textColor="secondary" caps>The Good</Heading>
           <List textColor="tertiary">
-            <ListItem>Easy to setup</ListItem>
+            <ListItem>Easy to setup - batteries included</ListItem>
             <ListItem>Can access anything the frontend can access</ListItem>
             <ListItem>Selector playground, test recording, reports</ListItem>
             <ListItem>Plain old javascript</ListItem>
@@ -119,9 +127,10 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={6} textColor="secondary" caps>The Bad</Heading>
           <List textColor="tertiary">
-            <ListItem>QA team will need to learn JS (Devs will help)</ListItem>
-            <ListItem>For now, only Chrome support</ListItem>
             <ListItem>Playground suggestions don't always work</ListItem>
+            <ListItem>QA team will need to learn JS</ListItem>
+            <ListItem>For now, only Chrome support</ListItem>
+            <ListItem>Parallel execution not possible</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
@@ -135,6 +144,10 @@ export default class Presentation extends React.Component {
             <ListItem>Start using in regression testing</ListItem>
             <ListItem>Whitebox tests</ListItem>
           </List>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Image src={happy} height="400" />
+          <Heading size={4} caps lineHeight={1} textColor="tertiary">Happy Gopi :)</Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="secondary" textColor="tertiary">
           <Heading size={2} textColor="primary" caps>References</Heading>
